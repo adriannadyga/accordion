@@ -1,0 +1,33 @@
+body {
+    padding: 10px;
+    section {
+        padding: 10px;
+        text-align: center;
+    }
+    .container {
+        width: 400px;
+        margin: 0 auto;
+        .accordion {
+            border: 1px solid #bbb;
+            h3 {
+                background-color: #ddd;
+                margin: 0;
+                padding: 5px;
+                border: 1px solid #bbb;
+                border-bottom: none;
+                cursor: pointer;
+            }
+            h3 + div {
+                height: 0;
+                overflow: hidden;
+                border: 1px solid #bbb;
+                border-bottom: none;
+                transition: height 0.5s;
+            }
+        }
+        .accordion h3.active + div {
+            height: 100px;
+            overflow: auto;
+        }
+    }
+}
